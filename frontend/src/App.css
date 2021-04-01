@@ -1,0 +1,31 @@
+.hide-scroll-bar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+	display: none;
+}
+
+.toggle-checkbox:checked {
+	right: 0;
+	border-color: #10B981;
+}
+.toggle-checkbox:checked + .toggle-label {
+	background-color: #10B981;
+}
+
+.loader {
+	border-top-color: #10B981;
+	-webkit-animation: spinner 1.5s linear infinite;
+	animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spinner {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}

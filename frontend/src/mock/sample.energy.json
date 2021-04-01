@@ -1,0 +1,266 @@
+{
+    "status": "ok",
+    "totalResults": 16494,
+    "articles": [
+        {
+            "source": {
+                "id": "mashable",
+                "name": "Mashable"
+            },
+            "author": "Mark Kaufman",
+            "title": "Why wind turbines thrive in Antarctica and places way colder than Texas",
+            "description": "At the main U.S. research station in Antarctica, annual temperatures average zero degrees Fahrenheit, but often drop much lower. There, near the United States' McMurdo Station, a few wind turbines can provide enough electricity to power 100 American homes, an…",
+            "url": "https://mashable.com/article/wind-turbines-texas/",
+            "urlToImage": "https://mondrian.mashable.com/2021%252F02%252F20%252F3d%252F6de21d9219c9480e9e484da5890de982.d5a40.png%252F1200x630.png?signature=IuWenJC-7t6OATyDPD0SerUbRtk=",
+            "publishedAt": "2021-02-20T12:00:00Z",
+            "content": "At the main U.S. research station in Antarctica, annual temperatures average zero degrees Fahrenheit, but often drop much lower. There, near the United States' McMurdo Station, a few wind turbines ca… [+6668 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Jonathan Shieber",
+            "title": "Malta’s energy storage tech to stabilize electricity grids reliant on renewables gets $50 million",
+            "description": "As energy grids transition away from fossil fuels and towards the use of zero emission sources of power from primarily renewable energy sources, they’re going to need an ability to store and then use the massive amounts of energy that’s only generated intermi…",
+            "url": "http://techcrunch.com/2021/02/24/maltas-energy-storage-tech-to-stabilize-electricity-grids-reliant-on-renewables-gets-50-million/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2017/05/gettyimages-553984387.jpg?w=533",
+            "publishedAt": "2021-02-24T14:05:53Z",
+            "content": "As energy grids transition away from fossil fuels and towards the use of zero emission sources of power from primarily renewable energy sources, they’re going to need an ability to store and then use… [+4702 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Reuters Staff",
+            "title": "France needs more renewables to hit carbon neutral goal - IEA, RTE - Reuters",
+            "description": "France will need to add a large supply of renewable energy and hit several other goals to be carbon neutral by 2050, the International Energy Agency (IEA) said in a joint report with grid operator RTE on Wednesday.",
+            "url": "https://www.reuters.com/article/us-iea-energy-renewables-idUSKBN29W15B",
+            "urlToImage": "https://static.reuters.com/resources/r/?m=02&d=20210127&t=2&i=1549227064&r=LYNXMPEH0Q0P1&w=800",
+            "publishedAt": "2021-01-27T11:15:00Z",
+            "content": "By Reuters Staff\r\nFILE PHOTO: A power-generating windmill turbine is pictured during sunset at a renewable energy park in Ecoust-Saint-Mein, France, September 6, 2020. REUTERS/Pascal Rossignol\r\nPARIS… [+1308 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Molly Taft on Earther, shared by Brian Kahn to Gizmodo",
+            "title": "Rich Hamptons Residents Scared of 'Violent Energy Releases' From Offshore Wind Farm Cable",
+            "description": "If New York doesn’t meet its renewable energy goals over the next few years, some billionaires might be to blame. A group of well-heeled Hamptons property owners filed a lawsuit this week seeking to block a key piece of infrastructure needed to construct a la…",
+            "url": "https://earther.gizmodo.com/rich-hamptons-residents-scared-of-violent-energy-releas-1846196116",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/kputopgsqurt0mdnbpkj.jpg",
+            "publishedAt": "2021-02-04T18:10:00Z",
+            "content": "If New York doesnt meet its renewable energy goals over the next few years, some billionaires might be to blame. A group of well-heeled Hamptons property owners filed a lawsuit this week seeking to b… [+6938 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Dharna Noor on Earther, shared by Brian Kahn to Gizmodo",
+            "title": "The Pentagon Sent a Pizza Box-Sized Solar Panel Into Space, But I'm Sure Everything Is Fine",
+            "description": "Here is a completely normal and totally not-nefarious thing that is happening: Scientists from the Pentagon sent a solar panel about the size of a pizza box up to space to test if it’s possible to send extraterrestrial electricity back to Earth. Read more...",
+            "url": "https://earther.gizmodo.com/the-pentagon-sent-a-pizza-box-sized-solar-panel-into-sp-1846358817",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/et6u8g5udzrqsql2emzt.png",
+            "publishedAt": "2021-02-25T23:01:00Z",
+            "content": "Here is a completely normal and totally not-nefarious thing that is happening: Scientists from the Pentagon sent a solar panel about the size of a pizza box up to space to test if its possible to sen… [+3502 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Jonathan Shieber",
+            "title": "Geothermal home heating gets a $30 million boost from Bill Gates’ Breakthrough Energy Ventures",
+            "description": "There’s a low energy solution to home heating and cooling sitting right underneath most houses, but until recently no one has been able to tap it. That solution is geothermal energy, using the earth’s own heat to provide temperature controlled comfort to home…",
+            "url": "http://techcrunch.com/2021/02/17/geothermal-home-heating-gets-a-30-million-boost-from-bill-gates-breakthrough-energy-ventures/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2020/03/breno-assis-r3WAWU5Fi5Q-unsplash.jpg?w=600",
+            "publishedAt": "2021-02-17T13:42:39Z",
+            "content": "There’s a low energy solution to home heating and cooling sitting right underneath most houses, but until recently no one has been able to tap it.\r\nThat solution is geothermal energy, using the earth… [+6332 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Global News"
+            },
+            "author": "Ali Swenson and Arijeta Lajka",
+            "title": "No, renewable energy is not primarily to blame for Texas power failures - Global News",
+            "description": "<ol><li>No, renewable energy is not primarily to blame for Texas power failures  Global News\r\n</li><li>Rick Perry: Texans Should Endure Blackouts To Keep Feds From Overseeing Power Grid  HuffPost Canada\r\n</li><li>How you can help Texas during the winter weath…",
+            "url": "https://globalnews.ca/news/7647520/texas-power-renewable-energy/",
+            "urlToImage": "https://globalnews.ca/wp-content/uploads/2021/02/CP14566370.jpg?quality=85&strip=all&w=720&h=379&crop=1",
+            "publishedAt": "2021-02-18T06:16:13Z",
+            "content": "With millions of Texas residents still without power amid frigid temperatures, conservative commentators have falsely claimed that wind turbines and solar energy were primarily to blame.\r\n“We should … [+3550 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Jonathan Shieber",
+            "title": "Renewable investment wave continues as solar lending company Loanpal raises $800 million",
+            "description": "Days after the billionaire investor Chamath Palihapitiya announced his involvement in the $1.3 billion acquisition of the solar and home improvement lending business Sunlight Financial, a collection of investors announced a nearly $1 billion cash infusion int…",
+            "url": "http://techcrunch.com/2021/01/27/renewable-investment-wave-continues-as-solar-lending-company-loanpal-raises-800-million/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2020/03/GettyImages-957099668.jpg?w=590",
+            "publishedAt": "2021-01-27T14:01:27Z",
+            "content": "Days after the billionaire investor Chamath Palihapitiya announced his involvement in the $1.3 billion acquisition of the solar and home improvement lending business Sunlight Financial, a collection … [+4122 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "Solar energy empowers young women in Yemen",
+            "description": "Ten women in Yemen’s Abs district have built and now run a solar microgrid.",
+            "url": "https://www.bbc.co.uk/news/av/world-middle-east-55894840",
+            "urlToImage": "https://ichef.bbci.co.uk/images/ic/400xn/p095vdj0.jpg",
+            "publishedAt": "2021-02-03T00:09:06Z",
+            "content": "Ten women in Yemen's Abs district have built and now run a solar microgrid.\r\nThe project was set up in 2019 with the help of the UN Development Programme. \r\nThe women now run the station as their own… [+508 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Reuters Staff",
+            "title": "Saipem kickstarts plans for giant clean energy hub in Italy - Reuters",
+            "description": "Italy's Saipem and renewable energy companies AGNES and Qint’x have applied for permits to develop one of the world's biggest offshore clean energy hubs, to generate wind and solar power and produce green hydrogen, Saipem said on Thursday.",
+            "url": "https://www.reuters.com/article/saipem-hub-green-idUSL8N2KO5EK",
+            "urlToImage": "https://s1.reutersmedia.net/resources_v2/images/rcom-default.png?w=800",
+            "publishedAt": "2021-02-18T13:58:00Z",
+            "content": "By Reuters Staff\r\nMILAN, Feb 18 (Reuters) - Italys Saipem and renewable energy companies AGNES and Qintx have applied for permits to develop one of the worlds biggest offshore clean energy hubs, to g… [+1810 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Reuters Staff",
+            "title": "Switzerland's Axpo establishes battery, hydrogen units - Reuters",
+            "description": "Swiss utility and energy trader Axpo has established two separate units for hydrogen and battery storage to complement its renewable energy business, it said on Monday.",
+            "url": "https://www.reuters.com/article/axpo-hydrogen-idUSL8N2KL24J",
+            "urlToImage": "https://s1.reutersmedia.net/resources_v2/images/rcom-default.png?w=800",
+            "publishedAt": "2021-02-15T10:05:00Z",
+            "content": "By Reuters Staff\r\nFeb 15 (Reuters) - Swiss utility and energy trader Axpo has established two separate units for hydrogen and battery storage to complement its renewable energy business, it said on M… [+822 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Agnieszka Barteczko, Kate Abnett",
+            "title": "Green energy investors target Poland as it weans itself off coal - Reuters",
+            "description": "Poland's biggest power producer PGE confirmed a deal on Wednesday to develop offshore wind farms with Denmark's Orsted in another sign the country reliant on coal is fast becoming a hot destination for renewable energy investors.",
+            "url": "https://www.reuters.com/article/us-poland-energy-offshore-idUSKBN2AA1I6",
+            "urlToImage": "https://static.reuters.com/resources/r/?m=02&d=20210210&t=2&i=1551031897&r=LYNXMPEH1910A&w=800",
+            "publishedAt": "2021-02-10T12:39:00Z",
+            "content": "WARSAW/BRUSSELS (Reuters) - Polands biggest power producer PGE confirmed a deal on Wednesday to develop offshore wind farms with Denmarks Orsted in another sign the country reliant on coal is fast be… [+5116 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Jonathan Shieber",
+            "title": "Tesla’s power businesses are beginning to take off",
+            "description": "Tesla just released its latest earnings report, and the results indicate that Elon Musk’s bets on energy storage and solar are beginning to pay off. The storage business was the star of the company’s power plays in the fourth quarter, with quarterly year-on-y…",
+            "url": "http://techcrunch.com/2021/01/27/teslas-power-businesses-are-beginning-to-take-off/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2020/12/GettyImages-1130604490.jpg?w=600",
+            "publishedAt": "2021-01-27T23:30:30Z",
+            "content": "Tesla just released its latest earnings report, and the results indicate that Elon Musk’s bets on energy storage and solar are beginning to pay off.\r\nThe storage business was the star of the company’… [+1983 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Walter Thompson",
+            "title": "Use today’s tech solutions to meet the climate crisis and do it profitably",
+            "description": "Here are just four innovations from our solar-powered plane that the market can start using now before it’s too late.",
+            "url": "http://techcrunch.com/2021/02/12/use-todays-tech-solutions-to-meet-the-climate-crisis-and-do-it-profitably/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/02/GettyImages-583505834.jpg?w=533",
+            "publishedAt": "2021-02-12T16:50:20Z",
+            "content": "Five years ago I landed the Solar Impulse 2 in Abu Dhabi after flying around the globe powered solely by solar energy, a first in aviation history.\r\nIt was also a milestone in energy and technology h… [+5665 chars]"
+        },
+        {
+            "source": {
+                "id": "wired",
+                "name": "Wired"
+            },
+            "author": "Christopher Null",
+            "title": "This Smart Panel Knows Your Electrical System's Cheat Code",
+            "description": "Span's electrical panel uses a mobile app to control a home's circuits. It's an essential upgrade for those with a solar battery backup system.",
+            "url": "https://www.wired.com/review/span-smart-electrical-panel/",
+            "urlToImage": "https://media.wired.com/photos/6036a2b477ec25a280aedaff/191:100/w_1280,c_limit/Gear-Span-Panel-Open-Front---IMG_6887.jpg",
+            "publishedAt": "2021-02-25T13:00:00Z",
+            "content": "As you might expect, upgrading your homes electrical panel is not exactly a DIY affair. Span starts by having you take photos of all of your electrical gear, then discuss the install process with a r… [+3026 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Nia Williams, Allison Lampert",
+            "title": "Canada plans hydropower push as Biden looks to clean up U.S. grid - Reuters",
+            "description": "Canada sees an opportunity in U.S. President Joe Biden's push to achieve a carbon-free electrical grid by 2035: hydropower exports.",
+            "url": "https://www.reuters.com/article/us-canada-hydro-idUSKBN2A92JB",
+            "urlToImage": "https://static.reuters.com/resources/r/?m=02&d=20210209&t=2&i=1550917014&r=LYNXMPEH181K6&w=800",
+            "publishedAt": "2021-02-09T17:36:00Z",
+            "content": "CALGARY, Alberta/ MONTREAL, (Reuters) - Canada sees an opportunity in U.S. President Joe Bidens push to achieve a carbon-free electrical grid by 2035: hydropower exports.\r\nFILE PHOTO: High voltage el… [+3869 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Victoria Klesty, Gwladys Fouche",
+            "title": "UPDATE 1-Norway's Aker, Statkraft agree on offshore wind partnership - Reuters",
+            "description": "Norwegian investment firm Aker , whose energy portfolio has mainly focused on oil and gas, said it would cooperate with renewable energy producer Statkraft to look at offshore wind opportunities in Norway.",
+            "url": "https://www.reuters.com/article/aker-renewables-idUSL1N2K20RB",
+            "urlToImage": "https://s1.reutersmedia.net/resources_v2/images/rcom-default.png?w=800",
+            "publishedAt": "2021-01-27T12:42:00Z",
+            "content": "(Adds Statkraft CEO, Aker CEO comments)\r\nOSLO, Jan 27 (Reuters) - Norwegian investment firm Aker , whose energy portfolio has mainly focused on oil and gas, said it would cooperate with renewable ene… [+1804 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Molly Taft on Earther, shared by Brian Kahn to Gizmodo",
+            "title": "How Much the Oil and Gas Industry Paid Texas Republicans Who Are Lying About Wind Energy",
+            "description": "As the crisis of rolling blackouts in Texas unfolds this week, some of the state’s loudest Republican politicians are falsely dragging “frozen wind turbines” as the cause. But behind every wind energy smear by a Texas politician is a dizzying amount of money …",
+            "url": "https://earther.gizmodo.com/how-much-the-oil-and-gas-industry-paid-texas-republican-1846288505",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/wq4lye6ogu5wilm6blks.jpg",
+            "publishedAt": "2021-02-17T19:37:00Z",
+            "content": "As the crisis of rolling blackouts in Texas unfolds this week, some of the states loudest Republican politicians are falsely dragging frozen wind turbines as the cause. But behind every wind energy s… [+6661 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Jonathan Shieber",
+            "title": "Volta Energy Technologies raises over $90M of a targeted $150M fund to back energy storage startups",
+            "description": "Volta Energy Technologies, the energy investment and advisory services firm backed by some of the biggest names in energy and energy storage materials, has closed on nearly $90 million of a targeted $150 million investment fund, according to people familiar w…",
+            "url": "http://techcrunch.com/2021/02/18/volta-energy-technologies-raises-over-90m-of-a-targeted-150m-fund-to-back-energy-storage-startups/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2020/04/battery.png?w=394",
+            "publishedAt": "2021-02-18T17:40:00Z",
+            "content": "Volta Energy Technologies, the energy investment and advisory services firm backed by some of the biggest names in energy and energy storage materials, has closed on nearly $90 million of a targeted … [+4801 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Reuters Staff",
+            "title": "Total sells wind and solar farm stakes to Credit Agricole and Banque des Territoires - Reuters",
+            "description": "French energy group Total has agreed to sell off stakes in some wind and solar farms to Credit Agricole Assurances and Banque des Territoires, in deals which Total said would boost its cash flow and return on equity.",
+            "url": "https://www.reuters.com/article/us-total-m-a-renewables-idUSKBN2AN0KL",
+            "urlToImage": "https://static.reuters.com/resources/r/?m=02&d=20210223&t=2&i=1552559469&r=LYNXMPEH1M0CM&w=800",
+            "publishedAt": "2021-02-23T07:49:00Z",
+            "content": "By Reuters Staff\r\nFILE PHOTO: The logo of French oil and gas company Total is seen at a petrol station in Neuville Saint Remy, France, October 1, 2020. REUTERS/Pascal Rossignol/File Photo\r\nPARIS (Reu… [+1317 chars]"
+        }
+    ]
+}

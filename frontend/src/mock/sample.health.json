@@ -1,0 +1,266 @@
+{
+    "status": "ok",
+    "totalResults": 149859,
+    "articles": [
+        {
+            "source": {
+                "id": "engadget",
+                "name": "Engadget"
+            },
+            "author": "Cherlynn Low",
+            "title": "Fitbit and Deepak Chopra launch 'Mindful Method' mental health series",
+            "description": "After the year we've had, it can be all too easy to feel emotionally and mentally overwhelmed. Thankfully, there has been growing awareness in the tech industry that our mental health contributes to our overall wellbeing as well. Fitbit was one of the first m…",
+            "url": "https://www.engadget.com/fitbit-deepak-chopra-mindful-method-available-now-140036885.html",
+            "urlToImage": "https://s.yimg.com/uu/api/res/1.2/SAxQDBbGuKj8xqKLSOyF_Q--~B/aD0zOTYzO3c9Mzk5ODthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2021-02/95642c30-7547-11eb-bf39-5b86f86d2c77.cf.jpg",
+            "publishedAt": "2021-02-23T14:00:36Z",
+            "content": "After the year we've had, it can be all too easy to feel emotionally and mentally overwhelmed. Thankfully, there has been growing awareness in the tech industry that our mental health contributes to … [+1415 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Allison Johnson",
+            "title": "Big Fitbit update adds Charge 4 health features, brings premium data to more users",
+            "description": "The Fitbit Charge 4 gets new health data features. Inspire 2, Versa 2, and Charge 4 owners also get access to Health Metrics, previously a Premium-only feature.",
+            "url": "https://www.theverge.com/2021/2/10/22276338/fitbit-update-charge-4-health-metrics",
+            "urlToImage": "https://cdn.vox-cdn.com/thumbor/1b57OlwLxHjjtF_htNEd_nXNxYA=/0x40:2000x1087/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/22294892/Fitbit_Charge_4_Core_Black_Rosewood_v2_Screens_Cropped.jpg",
+            "publishedAt": "2021-02-10T17:34:57Z",
+            "content": "Fitbit remains committed to keeping its health trackers competitive \r\nThe FitBit Charge 4 gets a healthy feature boost with a new update\r\nImage: FitBit\r\nFitbit is offering a major update for some of … [+1891 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Darrell Etherington",
+            "title": "Toronto’s UHN launches a study to see if Apple Watch can spot worsening heart failure",
+            "description": "A new study underway at Toronto’s University Health Network (UHN), a group of working research hospitals in the city, could shift our approach to treatment in an area of growing concern in human health. The study, led by Dr. Heather Ross, will investigate whe…",
+            "url": "http://techcrunch.com/2021/02/19/torontos-uhn-launches-a-study-to-see-if-apple-watch-can-spot-worsening-heart-failure/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/02/apple_heart-health-month_heart-rate-reading_02032021.jpg?w=600",
+            "publishedAt": "2021-02-19T13:29:53Z",
+            "content": "A new study underway at Toronto’s University Health Network (UHN), a group of working research hospitals in the city, could shift our approach to treatment in an area of growing concern in human heal… [+6294 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Alex Wilhelm",
+            "title": "How will investors value MetroMile and Oscar Health?",
+            "description": "What we learn today will hopefully bear on other insurtech startups that want liquidity during the current cycle.",
+            "url": "http://techcrunch.com/2021/02/10/how-will-investors-value-metromile-and-oscar-health/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2020/05/NSussman_Techcrunch_Exchange_v3_RD.jpg?w=533",
+            "publishedAt": "2021-02-10T17:08:23Z",
+            "content": "Last night, MetroMile and SPAC INSU Acquisition Corp. II completed their combination, putting the per-mile auto insurance startup up for regular trading today for the first time.\r\nIn the wake of last… [+3302 chars]"
+        },
+        {
+            "source": {
+                "id": "engadget",
+                "name": "Engadget"
+            },
+            "author": "Igor Bonifacic",
+            "title": "Fitbit update adds new Charge 4 features and Health Metrics changes",
+            "description": "It turns out blood glucose tracking isn’t the only new feature Fitbit has in store for its users this month. As spotted by Wearable, the company has several major updates planned, with something for almost everyone. You have the most to look forward to if you…",
+            "url": "https://www.engadget.com/fitbit-charge-4-update-212818781.html",
+            "urlToImage": "https://s.yimg.com/os/creatr-uploaded-images/2020-06/5df7f040-ab1e-11ea-bcbb-6da30c635208",
+            "publishedAt": "2021-02-10T21:28:18Z",
+            "content": "It turns out blood glucose tracking isnt the only new feature Fitbit has in store for its users this month. As spotted by Wearable, the company has several major updates planned, with something for a… [+1392 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Lifehacker.com"
+            },
+            "author": "Beth Skwarecki on Vitals, shared by Beth Skwarecki to Lifehacker",
+            "title": "Is Chickpea Flour More Nutritious Than Regular Flour?",
+            "description": "Flour made from chickpeas has more protein than regular white flour, and more fiber. But if you’ve seen headlines recently about chickpea flour’s health benefits, there are some serious caveats you should know about. Read more...",
+            "url": "https://vitals.lifehacker.com/is-chickpea-flour-more-nutritious-than-regular-flour-1846220985",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/v9wx0u1pzinwx0eobyte.jpg",
+            "publishedAt": "2021-02-08T16:30:00Z",
+            "content": "Flour made from chickpeas has more protein than regular white flour, and more fiber. But if youve seen headlines recently about chickpea flours health benefits, there are some serious caveats you sho… [+3105 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Darrell Etherington",
+            "title": "Google to offer heart and respiratory rate measurements using just your smartphone’s camera",
+            "description": "Google is introducing features that will allow users to take vital health measurements using just the camera they already have on their smartphone, expanding health and fitness features typically only available on dedicated wearables to a whole new group of p…",
+            "url": "http://techcrunch.com/2021/02/04/google-to-enable-heart-and-respiratory-rate-measurements-using-just-your-smartphones-camera/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/02/pixel-respiratory-rate.jpg?w=680",
+            "publishedAt": "2021-02-04T16:00:26Z",
+            "content": "Google is introducing features that will allow users to take vital health measurements using just the camera they already have on their smartphone, expanding health and fitness features typically onl… [+5161 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Jonathan Shieber",
+            "title": "Y Combinator company Axle Health is bringing on-demand home testing services to telehealth providers",
+            "description": "While usage of telehealth services have surged during the COVID-19 epidemic, there are some times when health professionals need to be around in person to conduct diagnostics tests. To help those telehealth companies bridge that gap is Axle Health, a company …",
+            "url": "http://techcrunch.com/2021/02/23/y-combinator-company-axle-health-is-bringing-on-demand-home-testing-services-to-telehealth-providers/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2020/03/GettyImages-862530228.jpg?w=600",
+            "publishedAt": "2021-02-23T13:47:54Z",
+            "content": "While usage of telehealth services have surged during the COVID-19 epidemic, there are some times when health professionals need to be around in person to conduct diagnostics tests. To help those tel… [+1526 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "New York Times"
+            },
+            "author": "Andrew Jacobs",
+            "title": "Health Care Workers Hit Hard by the Coronavirus Pandemic",
+            "description": "Vaccines may be on the way, but many on the front-lines are burned out. Has the government done enough to help alleviate their stress?",
+            "url": "https://www.nytimes.com/2021/02/04/health/health-care-workers-burned-out-quitting.html",
+            "urlToImage": "https://static01.nyt.com/images/2021/02/04/science/04VIRUS-HEALTHWORKERS1/04VIRUS-HEALTHWORKERS1-facebookJumbo.jpg",
+            "publishedAt": "2021-02-04T13:50:19Z",
+            "content": "Thousands of health care workers have already paid the ultimate price for their workaday devotion. Since March, more than 3,300 nurses, doctors, social workers and physical therapists have died from … [+1896 chars]"
+        },
+        {
+            "source": {
+                "id": "wired",
+                "name": "Wired"
+            },
+            "author": "Jaime Stathis",
+            "title": "3 Services to Help You Take Charge of Your Mental Health",
+            "description": "We're all having a tough time right now, but these apps, podcasts, and websites can provide a lifeline.",
+            "url": "https://www.wired.com/story/three-services-help-mental-health/",
+            "urlToImage": "https://media.wired.com/photos/6019a71e48fbdf6f7c2a987d/191:100/w_1280,c_limit/Gear-Mental-Health-1138568025.jpg",
+            "publishedAt": "2021-02-03T13:00:00Z",
+            "content": "It's an understatement to say that the last year caught most of us off guard. Between homeschooling, working from home, and cobbling together home gyms, we spent most of our lives, well, in our homes… [+3661 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "New York Times"
+            },
+            "author": "Will Dudding and Marcus Payadue",
+            "title": "GameStop, Health Care, GM: Your Thursday Evening Briefing",
+            "description": "Here’s what you need to know at the end of the day.",
+            "url": "https://www.nytimes.com/2021/01/28/briefing/gamestop-healthcare-general-motors-.html",
+            "urlToImage": "https://static01.nyt.com/images/2021/01/28/multimedia/28pm-briefing-us-robinhood/merlin_182944041_f6e16b93-86fd-4a30-91f6-4185b63ebdfc-facebookJumbo.jpg",
+            "publishedAt": "2021-01-28T22:58:39Z",
+            "content": "6. In Afghanistan, if you follow these sneakers, youll find the Taliban.\r\nCheetahs athletic shoes are produced by one of the largest shoe companies in Pakistan. They are marketed toward athletes, wer… [+630 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Natasha Lomas",
+            "title": "Telemedico gets $6.6M to grow the reach of its digital health SaaS",
+            "description": "Poland-based Telemedico has closed a €5.5 million (~$6.6M) Series A round of funding. The round is led by Flashpoint Venture Capital, Uniqa Ventures, PKO VC, Black Pearls VC (an existing investor) and Adamed. Telehealth services specifically, and digital heal…",
+            "url": "http://techcrunch.com/2021/02/01/telemedico-gets-6-6m-to-grow-the-reach-of-its-digital-health-saas/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/02/Screenshot-2021-02-01-at-18.47.39.png?w=727",
+            "publishedAt": "2021-02-01T18:03:46Z",
+            "content": "Poland-based Telemedico has closed a 5.5 million (~$6.6M) Series A round of funding. The round is led by Flashpoint Venture Capital, Uniqa Ventures, PKO VC, Black Pearls VC (an existing investor) and… [+6892 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Jonathan Shieber",
+            "title": "Folx Health raises $25 million for virtual clinical offerings and care for the LGBTQIA+ community",
+            "description": "Folx Health is leveraging the explosion of virtual care services to offer greater access to healthcare focused on the needs of the LGBTQIA+ community, and has raised $25 million in new funding to help it grow. It’s part of a revolution in care that’s targetin…",
+            "url": "http://techcrunch.com/2021/02/02/folx-health-raises-25-million-for-virtual-clinical-offerings-and-care-for-the-lgbtqia-community/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/02/2.jpg?w=711",
+            "publishedAt": "2021-02-02T14:00:12Z",
+            "content": "Folx Health is leveraging the explosion of virtual care services to offer greater access to healthcare focused on the needs of the LGBTQIA+ community, and has raised $25 million in new funding to hel… [+4225 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "New York Times"
+            },
+            "author": "Sheila Mulrooney Eldred",
+            "title": "My Teens Are Coronavirus Vaccine Guinea Pigs",
+            "description": "A health journalist is getting a front-row seat to one of the most-anticipated pediatric trials in history.",
+            "url": "https://www.nytimes.com/2021/02/16/parenting/teen-coronavirus-vaccine-trial.html",
+            "urlToImage": "https://static01.nyt.com/images/2021/02/16/well/16well-teen-vaccine/16well-teen-vaccine-facebookJumbo.jpg",
+            "publishedAt": "2021-02-16T15:48:53Z",
+            "content": "On a gray January afternoon, we were ushered into a gray exam room in downtown Minneapolis to learn the details of participating. A research coordinator explained that Moderna would pay the kids $75 … [+2393 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Lifehacker.com"
+            },
+            "author": "Aisha Jordan",
+            "title": "Don't Let Your Dog Play With Tennis Balls",
+            "description": "There is nothing more delightful than seeing the joy on a dog’s face as they furiously chase down a bouncing tennis ball. Unfortunately, your pup’s favorite toy could be hazardous to their health. Here’s why you should replace those tennis balls with somethin…",
+            "url": "https://lifehacker.com/dont-let-your-dog-play-with-tennis-balls-1846367687",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/m4i2hii3sphbr367wnlz.jpg",
+            "publishedAt": "2021-02-26T22:30:00Z",
+            "content": "There is nothing more delightful than seeing the joy on a dogs face as they furiously chase down a bouncing tennis ball. Unfortunately, your pups favorite toy could be hazardous to their health. Here… [+3714 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "https://www.facebook.com/bbcnews",
+            "title": "Covid-19: Tanzania has no vaccination plan, minister says",
+            "description": "The World Health Organization (WHO) has urged Tanzania to consider inoculating its population.",
+            "url": "https://www.bbc.co.uk/news/world-africa-55905102",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/E805/production/_116779395_gettyimages-1210412677.jpg",
+            "publishedAt": "2021-02-02T15:51:15Z",
+            "content": "image copyrightGetty Images\r\nimage captionThe WHO has urged the country to consider inoculating its population\r\nTanzania's government, which has been criticised for its handling of the pandemic, has … [+3587 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "https://www.facebook.com/bbcnews",
+            "title": "Australian man survives crocodile attack by 'prising jaws off his head'",
+            "description": "Health officials say the man is expected to make a full recovery following the Queensland attack.",
+            "url": "https://www.bbc.co.uk/news/world-australia-55837971",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/E16F/production/_116711775_hi000732202-1.jpg",
+            "publishedAt": "2021-01-28T11:42:35Z",
+            "content": "image captionThe man told paramedics he was attacked by a saltwater crocodile\r\nA man has survived a crocodile attack in northern Australia by prising the animal's jaws from his head, according to hea… [+1946 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "https://www.facebook.com/bbcnews",
+            "title": "Imlonely: How a YouTube music channel became a mental health hub",
+            "description": "The Youtube channel that started as a musical diary but became a mental health hub.",
+            "url": "https://www.bbc.co.uk/news/disability-55588880",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/88D9/production/_116833053_59f80b67-ccfb-4fcd-b718-1a3a708ca06d.jpg",
+            "publishedAt": "2021-02-08T00:14:21Z",
+            "content": "By Drew Miller HyndmanBBC Ouch\r\nimage captionHunter started his YouTube channel as a personal musical diary\r\nAmong the thousands of music channels on YouTube there is one like no other. Imlonely star… [+5962 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "New York Times"
+            },
+            "author": "Azi Paybarah",
+            "title": "9-Year Sentence for Man Who Threatened to Kill President Trump",
+            "description": "Gary Joseph Gravelle, who has a history of mental illness, also targeted federal probation officers, mental health providers and a credit union, prosecutors said.",
+            "url": "https://www.nytimes.com/2021/01/27/us/connecticut-man-trump-threats-sentenced-.html",
+            "urlToImage": "https://static01.nyt.com/images/2021/01/27/lens/27xp-threats-photo/27xp-threats-photo-facebookJumbo.jpg",
+            "publishedAt": "2021-01-28T04:41:31Z",
+            "content": "Mr. Gravelle has been incarcerated since his arrest on Sept. 8, 2018, and had previously been jailed for sending threatening messages in 2010, according to Mr. Durhams office.\r\nHis guilt or innocence… [+1040 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Entrepreneur"
+            },
+            "author": "Ben Angel",
+            "title": "7 Signs Your Gut Health Is Impacting Your Mental Health",
+            "description": "In this mini-masterclass, Ben Angel shares how we respond to certain stimuli, whether that be food, stress or the microorganisms that make up our gut microbiome.",
+            "url": "https://www.entrepreneur.com/video/364497",
+            "urlToImage": "https://assets.entrepreneur.com/content/3x2/2000/1612126746-ScreenShot2021-01-31at30743PM2.png",
+            "publishedAt": "2021-02-05T18:30:00Z",
+            "content": "February\r\n5, 2021\r\n1 min read\r\nOpinions expressed by Entrepreneur contributors are their own.\r\nWhen it comes to mental health, we’re told we just need to think positively and find a happy thought. Th… [+723 chars]"
+        }
+    ]
+}

@@ -1,0 +1,266 @@
+{
+    "status": "ok",
+    "totalResults": 100620,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Lucas Ropek",
+            "title": "U.S. Charges Members of North Korean Hacker Group of Allegedly Stealing Over $1 Billion in Bitcoin",
+            "description": "The U.S. Department of Justice has charged three members of “Lazarus,” a DPKR-sponsored hacker cell that, since its inception, has reportedly stolen over a billion dollars in Bitcoin and other cryptocurrencies through various cyber campaigns. The DOJ has call…",
+            "url": "https://gizmodo.com/u-s-charges-members-of-north-korean-hacker-group-of-al-1846288099",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/nnizsrdiqvudtyumlmuk.jpg",
+            "publishedAt": "2021-02-17T22:30:00Z",
+            "content": "The U.S. Department of Justice has charged three members of Lazarus, a DPKR-sponsored hacker cell that, since its inception, has reportedly stolen over a billion dollars in Bitcoin and other cryptocu… [+3992 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Zack Whittaker",
+            "title": "MetroMile says a website bug let a hacker obtain driver’s license numbers",
+            "description": "Car insurance startup MetroMile said it has fixed a security flaw on its website that allowed a hacker to obtain driver’s license numbers. The San Francisco-based insurance startup disclosed the security breach in its latest 8-K filing with the U.S. Securitie…",
+            "url": "http://techcrunch.com/2021/02/02/metromile-website-bug-hacker/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/02/GettyImages-10073596561.jpg?w=597",
+            "publishedAt": "2021-02-02T17:24:46Z",
+            "content": "Car insurance startup MetroMile said it has fixed a security flaw on its website that allowed a hacker to obtain driver’s license numbers.\r\nThe San Francisco-based insurance startup disclosed the sec… [+1602 chars]"
+        },
+        {
+            "source": {
+                "id": "wired",
+                "name": "Wired"
+            },
+            "author": "Brian Barrett",
+            "title": "Update Your iPhone and iPad Now If You Haven't Recently",
+            "description": "Plus: A ransomware arrest, a dating site data leak, and more of the week's top security news.",
+            "url": "https://www.wired.com/story/update-ios-14-active-exploit-netwalker-arrest-security-roundup/",
+            "urlToImage": "https://media.wired.com/photos/60148a72fdde4b84d106d1e0/191:100/w_1280,c_limit/Sec_ru_1227851857.jpg",
+            "publishedAt": "2021-01-30T14:00:00Z",
+            "content": "Believe it or not, GameStop stock wasn't the world's only story this week. The last few days have been tumultuous for cybersecurity as well, especially after revelations that [North Korean hackers ta… [+4008 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Zack Whittaker",
+            "title": "Israeli startup CYE raises $100M to help companies shore up their cyber-defenses",
+            "description": "Cybersecurity startup CYE has raised $100 million in a new growth round, led by investment firm EQT and with participation from 83North. CYE was founded in 2012 by Reuven Aronashvili to help companies shore up their security posture. It does this in large par…",
+            "url": "http://techcrunch.com/2021/02/10/israeli-startup-cye-raises-100m-to-help-companies-shore-up-their-cyber-defenses/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/02/3_1.png?w=716",
+            "publishedAt": "2021-02-10T14:00:32Z",
+            "content": "Cybersecurity startup CYE has raised $100 million in a new growth round, led by investment firm EQT and with participation from 83North.\r\nCYE was founded in 2012 by Reuven Aronashvili to help compani… [+1069 chars]"
+        },
+        {
+            "source": {
+                "id": "mashable",
+                "name": "Mashable"
+            },
+            "author": "Jae Thomas",
+            "title": "Learn to become an ethical hacker with this course bundle",
+            "description": "TL;DR: Get in-the-know on all facets of cybersecurity with the All-In-One 2021 Super-Sized Ethical Hacking Bundle. As of Feb. 3, save 98% and get access to all 18 courses for just $42.99.\n\nYes, there are good hackers — ethical hackers, if you will — and you c…",
+            "url": "https://mashable.com/shopping/feb-3-all-in-one-2021-super-sized-ethical-hacking-bundle/",
+            "urlToImage": "https://mondrian.mashable.com/2021%252F02%252F03%252Fc1%252F47cc7d742513406e8c1691d147dd0481.45233.jpg%252F1200x630.jpg?signature=tHwnIDXLydrdoDNQXXrOCG6URUc=",
+            "publishedAt": "2021-02-03T10:00:00Z",
+            "content": "TL;DR: Get in-the-know on all facets of cybersecurity with the All-In-One 2021 Super-Sized Ethical Hacking Bundle.As of Feb. 3, save 98% and get access to all 18 courses for just $42.99.\r\nYes, there … [+1479 chars]"
+        },
+        {
+            "source": {
+                "id": "mashable",
+                "name": "Mashable"
+            },
+            "author": "Joseph Green",
+            "title": "Become an ethical hacker with this set of online courses",
+            "description": "TL;DR: The All-In-One 2021 Super-Sized Ethical Hacking Bundle is on sale for £30.94 as of Feb. 17, saving you 98% on list price.\n\nYes, there are good hackers — ethical hackers, if you will — and you can start your journey to become one with this online traini…",
+            "url": "https://mashable.com/uk/shopping/feb-17-all-in-one-2021-super-sized-ethical-hacking-bundle/",
+            "urlToImage": "https://mondrian.mashable.com/2021%252F02%252F17%252F29%252Fba3b5d0ea7224024a7f7f896e68c43c1.c1722.jpg%252F1200x630.jpg?signature=xkM1pleyAJdGYvDU5RH1Ougtsck=",
+            "publishedAt": "2021-02-17T05:00:00Z",
+            "content": "TL;DR: The All-In-One 2021 Super-Sized Ethical Hacking Bundle is on sale for £30.94 as of Feb. 17, saving you 98% on list price.\r\nYes, there are good hackers  ethical hackers, if you will  and you ca… [+1512 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Reuters Staff",
+            "title": "Ukraine says Russian hackers attack web-based state document system - Reuters",
+            "description": "Ukraine accused an unnamed group of Russian hackers on Wednesday of trying to disseminate malicious documents through a web-based system on which government documents are circulated, but did not say whether any damage was caused.",
+            "url": "https://www.reuters.com/article/us-ukraine-cyber-idUSKBN2AO11W",
+            "urlToImage": "https://static.reuters.com/resources/r/?m=02&d=20210224&t=2&i=1552717944&r=LYNXMPEH1N0J6&w=800",
+            "publishedAt": "2021-02-24T09:43:00Z",
+            "content": "By Reuters Staff\r\nFILE PHOTO: A man holds a laptop computer as cyber code is projected on him in this illustration picture taken on May 13, 2017. REUTERS/Kacper Pempel/Illustration\r\nKYIV (Reuters) - … [+1154 chars]"
+        },
+        {
+            "source": {
+                "id": "engadget",
+                "name": "Engadget"
+            },
+            "author": "Richard Lawler",
+            "title": "Right-wing site Gab responds to 'alleged' data breach",
+            "description": "The CEO of Gab — the right-wing haven that lost mainstream tech backing after violent attacks in 2018 — published a curious blog post denying that the company has suffered a data breach. While it mysteriously went offline for a short time a week ago, at the t…",
+            "url": "https://www.engadget.com/gab-data-breach-ddosecrets-231959411.html",
+            "urlToImage": "https://s.yimg.com/uu/api/res/1.2/O3qfGUMuAS1B2cCtlbwdSg--~B/aD0yMzEwO3c9MzAwMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2021-02/cc7cabe0-7888-11eb-9d7f-45cbe21e2ab8.cf.jpg",
+            "publishedAt": "2021-02-26T23:19:59Z",
+            "content": "The CEO of Gab the right-wing haven that lost mainstream tech backing after violent attacks in 2018 published a curious blog post denying that the company has suffered a data breach. While it mysteri… [+894 chars]"
+        },
+        {
+            "source": {
+                "id": "mashable",
+                "name": "Mashable"
+            },
+            "author": "Jack Morse",
+            "title": "Apple just released a security update for your iPhone. Download it now.",
+            "description": "Keeping all your gadgets up to date is a never-ending pain, but a Tuesday announcement from Apple reminds us exactly why it's so important. \nAccording to the tech giant, reachers uncovered multiple vulnerabilities in the software powering iPhones and iPads. A…",
+            "url": "https://mashable.com/article/apple-update-security-patch-ios-ipad-os/",
+            "urlToImage": "https://mondrian.mashable.com/2021%252F01%252F26%252F4f%252F32c37a33e2d140e589c8a4dc31e284eb.8e85c.png%252F1200x630.png?signature=BXFoQW73V0fHr4yYqctpA7w2ctw=",
+            "publishedAt": "2021-01-26T21:46:21Z",
+            "content": "Keeping all your gadgets up to date is a never-ending pain, but a Tuesday announcement from Apple reminds us exactly why it's so important. \r\nAccording to the tech giant, reachers uncovered multiple … [+1788 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "https://www.facebook.com/bbcnews",
+            "title": "Clubhouse confirms data spillage of its audio streams",
+            "description": "A user has been banned for streaming audio from multiple Clubhouse chatrooms onto their website.",
+            "url": "https://www.bbc.co.uk/news/business-56163623",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/18322/production/_117160199_clubhouse2.jpg",
+            "publishedAt": "2021-02-23T04:28:03Z",
+            "content": "By Mary-Ann RussonBusiness reporter, BBC News\r\nAudio-only social network iPhone app Clubhouse has confirmed that it experienced a data spill on Sunday.\r\nThe app allows users to join and participate i… [+4799 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Reuters Staff",
+            "title": "Ukraine accuses Russian networks of new massive cyber attacks - Reuters",
+            "description": "Ukraine on Monday accused unnamed Russian internet networks of massive attacks on Ukrainian security and defence websites, but gave no details of any damage done or say who it believed was behind the assault.",
+            "url": "https://www.reuters.com/article/us-ukraine-cyber-idUSKBN2AM1VF",
+            "urlToImage": "https://s1.reutersmedia.net/resources_v2/images/rcom-default.png?w=800",
+            "publishedAt": "2021-02-22T15:42:00Z",
+            "content": "By Reuters Staff\r\nKYIV (Reuters) - Ukraine on Monday accused unnamed Russian internet networks of massive attacks on Ukrainian security and defence websites, but gave no details of any damage done or… [+1628 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Reuters Staff",
+            "title": "Myanmar junta cyber bill would violate rights, critics say - Reuters",
+            "description": "Cyber-security laws floated by Myanmar's new junta to allow it to ban content it dislikes, restrict internet providers and intercept data would violate human rights, a group of civil society organisations said on Wednesday.",
+            "url": "https://www.reuters.com/article/myanmar-politics-internet-idUSL1N2KG1XG",
+            "urlToImage": "https://s1.reutersmedia.net/resources_v2/images/rcom-default.png?w=800",
+            "publishedAt": "2021-02-10T16:56:00Z",
+            "content": "By Reuters Staff\r\nFeb 10 (Reuters) - Cyber-security laws floated by Myanmars new junta to allow it to ban content it dislikes, restrict internet providers and intercept data would violate human right… [+1896 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Lucas Ropek",
+            "title": "The SolarWinds Hack Just Keeps Getting More Wild",
+            "description": "Now the Chinese are involved. That’s one of the newest allegations to emerge in the SolarWinds scandal, the supply chain “cyber Pearl Harbor” that seems to have enveloped the entire U.S. government, as well as the private sector.Read more...",
+            "url": "https://gizmodo.com/the-solarwinds-hack-just-keeps-getting-wilder-1846193313",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/tuyqwswo9qu9wd1ius0w.jpg",
+            "publishedAt": "2021-02-04T01:40:00Z",
+            "content": "Now the Chinese are involved. Thats one of the newest allegations to emerge in the SolarWinds scandal, the supply chain cyber Pearl Harbor that seems to have enveloped the entire U.S. government, as … [+2841 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Lucas Ropek",
+            "title": "SolarWinds Hackers Also Went After NASA and the FAA",
+            "description": "Apparently not content with having penetrated the networks of such piddling federal agencies as the U.S. State Department, the Department of Homeland Security, and  that agency that maintains our nuclear stockpile, the hackers of the “SolarWinds” affair  also…",
+            "url": "https://gizmodo.com/solarwinds-hackers-also-went-after-nasa-and-the-faa-1846340394",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/kcs2lwfrltkaweauvf0m.jpg",
+            "publishedAt": "2021-02-24T01:30:00Z",
+            "content": "Apparently not content with having penetrated the networks of such piddling federal agencies as the U.S. State Department, the Department of Homeland Security, and that agency that maintains our nucl… [+3684 chars]"
+        },
+        {
+            "source": {
+                "id": "the-next-web",
+                "name": "The Next Web"
+            },
+            "author": "TNW Deals",
+            "title": "This 18-course, 132-hour mega-bundle can turn you into an ethical hacker",
+            "description": "TLDR: The All-In-One 2021 Super-Sized Ethical Hacking Bundle is a complete cybersecurity education, featuring 132 hours of intensive instruction to become a top-flight white hat hacker.  If you grew up in the 1980’s, you lived with constant fear that simmerin…",
+            "url": "https://thenextweb.com/offers/2021/02/03/this-18-course-132-hour-mega-bundle-can-turn-you-into-an-ethical-hacker/",
+            "urlToImage": "https://img-cdn.tnwcdn.com/image/tnwDeals?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2021%2F02%2Fcaspar-camille-rubin-0qvBNep1Y04-unsplash.jpg&signature=51a92cec1560c7ddf79ae25f1cef87f4",
+            "publishedAt": "2021-02-03T14:00:37Z",
+            "content": "TLDR: The All-In-One 2021 Super-Sized Ethical Hacking Bundle is a complete cybersecurity education, featuring 132 hours of intensive instruction to become a top-flight white hat hacker. \r\nIf you grew… [+2532 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": null,
+            "title": "Britain's GCHQ cyber spies embrace the AI revolution - Reuters",
+            "description": "Britain's GCHQ cyber spies embrace the AI revolution  Reuters",
+            "url": "https://www.reuters.com/article/us-britain-security-ai-idUSKBN2AO2W2",
+            "urlToImage": null,
+            "publishedAt": "2021-02-24T22:37:24Z",
+            "content": "FILE PHOTO: A GCHQ logo on a wall inside Britain's Government Communication Headquarters, in Cheltenham, November 17, 2015. REUTERS/Ben Birchall/Pool\r\nEurope News\r\nGuy Faulconbridge\r\nLONDON (Reuters)… [+2904 chars]"
+        },
+        {
+            "source": {
+                "id": "engadget",
+                "name": "Engadget"
+            },
+            "author": "Kris Holt",
+            "title": "DOJ charges North Korean hackers over cryptocurrency thefts and cyberattacks",
+            "description": "The Department of Justice has unsealed charges against three alleged North Korean hackers. It accused them of conspiring to carry out a string of cyberattacks and to steal and extort over $1.3 billion in cash and cryptocurrency from businesses and banks. The …",
+            "url": "https://www.engadget.com/doj-north-korea-military-hackers-charges-182026663.html",
+            "urlToImage": "https://s.yimg.com/uu/api/res/1.2/IqprirGiZOD5ghwYstwPxQ--~B/aD01Nzc0O3c9ODY2MDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2021-02/e1d31330-7149-11eb-9e7e-3b729f05bd73",
+            "publishedAt": "2021-02-17T18:20:26Z",
+            "content": "The Department of Justice has unsealed charges against three alleged North Korean hackers. It accused them of conspiring to carry out a string of cyberattacks and to steal and extort over $1.3 billio… [+2087 chars]"
+        },
+        {
+            "source": {
+                "id": "wired",
+                "name": "Wired"
+            },
+            "author": "Andy Greenberg",
+            "title": "Cops Disrupt Emotet, the Internet's ‘Most Dangerous Malware’",
+            "description": "A global operation has taken down the notorious botnet in a blow to cybercriminals worldwide.",
+            "url": "https://www.wired.com/story/emotet-botnet-takedown/",
+            "urlToImage": "https://media.wired.com/photos/60117a443fc56a2c621ef02b/191:100/w_1280,c_limit/Sec_botnet_1229491031.jpg",
+            "publishedAt": "2021-01-27T17:46:17Z",
+            "content": "To take down Emotet, police and a large group of security industry professionals worked together to simultaneously hijack hundreds of Emotet command-and-control servers, according to one security res… [+3085 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Lucas Ropek",
+            "title": "Law Firm Accused of 'Aiding' Trump's Election Disputes Gets Data Stolen By Hackers",
+            "description": "A ransomware gang claims to have stolen over 100 gigabytes of data from Jones Day, a prominent global law firm that recently stirred backlash for its entanglement in the 2020 presidential election.Read more...",
+            "url": "https://gizmodo.com/law-firm-accused-of-aiding-trumps-election-disputes-get-1846284511",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/pyd9c0hevumvsdipxthc.jpg",
+            "publishedAt": "2021-02-17T15:05:00Z",
+            "content": "A ransomware gang claims to have stolen over 100 gigabytes of data from Jones Day, a prominent global law firm that recently stirred backlash for its entanglement in the 2020 presidential election.\r\n… [+5344 chars]"
+        },
+        {
+            "source": {
+                "id": "engadget",
+                "name": "Engadget"
+            },
+            "author": "Igor Bonifacic",
+            "title": "Huawei files lawsuit disputing FCC 'security threat' designation",
+            "description": "According to The Wall Street Journal, Huawei has filed a lawsuit to challenge a decision the Federal Communications Commission (FCC) made last year when it designated the company as a national security threat. The legal challenge comes as the Chinese manufact…",
+            "url": "https://www.engadget.com/huawei-files-us-lawsuit-disputing-fcc-security-threat-designation-172919533.html",
+            "urlToImage": "https://s.yimg.com/os/creatr-uploaded-images/2021-02/133737c0-6bc4-11eb-bfaf-0b703a4399b5",
+            "publishedAt": "2021-02-10T17:29:19Z",
+            "content": "According to The Wall Street Journal, Huawei has filed a lawsuit to challenge a decision the Federal Communications Commission (FCC) made last year when it designated the company as a national securi… [+2660 chars]"
+        }
+    ]
+}
