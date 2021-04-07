@@ -115,8 +115,8 @@ const Dashboard = ({ isLogin, user, handleLogout }) => {
 	return (
 		<div>
 			{isLogin && <div className="flex h-screen justify-center items-center">
-				<div className="m-auto w-5/12 h-96 flex shadow-md rounded-md">
-					<div className="w-5/12 h-full bg-gray-100 rounded-l-md p-5">
+				<div className="m-auto w-full h-screen flex shadow-md rounded-md">
+					<div className="w-full h-full bg-gray-100 rounded-l-md p-5">
 						<span className="w-24 h-24 block m-auto mb-3 text-green-500">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
 								<path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
@@ -124,9 +124,6 @@ const Dashboard = ({ isLogin, user, handleLogout }) => {
 						</span>
 						<h6 className="mb-2">Welcome, {user.displayName}</h6>
 						<button className="bg-red-500 text-white text-sm font-light w-full p-2 rounded-md mb-2" onClick={() => handleLogout()}>Logout</button>
-					</div>
-					<div className="w-7/12 h-full bg-green-500 rounded-r-md">
-
 					</div>
 				</div>
 			</div>}
@@ -141,8 +138,8 @@ const LoginPage = ({
 	return (
 		<div>
 			{!isLogin && <div className="flex h-screen justify-center items-center">
-				<div className="m-auto w-5/12 h-96 flex shadow-md rounded-md">
-					<div className="w-5/12 h-full bg-gray-100 rounded-l-md p-5">
+				<div className="m-auto w-full h-screen flex shadow-md rounded-md">
+					<div className="h-full bg-gray-100 rounded-l-md p-5">
 						<span className="w-24 h-24 block m-auto mb-3 text-green-500">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
 								<path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
@@ -156,9 +153,6 @@ const LoginPage = ({
 						<span className="text-gray-600 font-light text-xs text-center w-full block mb-2">----- or login with -----</span>
 						<button className="bg-red-500 text-white text-sm font-light w-full p-2 rounded-md mb-2" onClick={() => handleLoginWithGoogle()}>Google</button>
 						<button className="bg-blue-500 text-white text-sm font-light w-full p-2 rounded-md">Facebook</button>
-					</div>
-					<div className="w-7/12 h-full bg-green-500 rounded-r-md">
-
 					</div>
 				</div>
 			</div>}
