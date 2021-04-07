@@ -1,6 +1,5 @@
 {
   "name": "quick-go",
-  "homepage": "https://samaita.github.io/quick-go",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
