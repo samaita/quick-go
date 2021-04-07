@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/auth'
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 
 import './App.css'
 
 function App() {
-
 	const [loggedIn, setLoggedIn] = useLocalStorage("loggedIn", false),
 		[credential, setCredential] = useLocalStorage("credential", {}),
 		[googleUser, setGoogleUser] = useLocalStorage("googleUser", {})
@@ -99,19 +99,40 @@ function App() {
 	return (
 		<div>
 			<div className="bg-gray-200">
-				<LoginPage
-					isLogin={loggedIn}
-					handleLoginWithGoogle={handleLoginWithGoggle} />
-				<Dashboard
-					isLogin={loggedIn}
-					user={googleUser}
-					handleLogout={handleLogout} />
+				<BrowserRouter>
+					<div>
+						<Route path="/login" render={(props) => (
+							<LoginPage
+								{...props}
+								isLogin={loggedIn}
+								handleLoginWithGoogle={handleLoginWithGoggle} />)}
+						/>
+						<Route exact path="/" component={Mock} />
+						<Route path="/dashboard" render={(props) => (
+							<Dashboard
+								{...props}
+								isLogin={loggedIn}
+								user={googleUser}
+								handleLogout={handleLogout} />)}
+						/>
+					</div>
+				</BrowserRouter>
 			</div>
 		</div>
 	)
 }
 
+const Mock = () => {
+	return (
+		<h1>HEHE</h1>
+	)
+}
+
 const Dashboard = ({ isLogin, user, handleLogout }) => {
+	if (!isLogin) {
+		return <Redirect to="/login" />
+	}
+
 	return (
 		<div>
 			{isLogin && <div className="flex h-screen justify-center items-center">
@@ -131,10 +152,10 @@ const Dashboard = ({ isLogin, user, handleLogout }) => {
 	)
 }
 
-const LoginPage = ({
-	isLogin,
-	handleLoginWithGoogle
-}) => {
+const LoginPage = ({ isLogin, handleLoginWithGoogle }) => {
+	if (isLogin) {
+		return <Redirect to="/dashboard" />
+	}
 	return (
 		<div>
 			{!isLogin && <div className="flex h-screen justify-center items-center">
