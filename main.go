@@ -1,10 +1,7 @@
 package main
 
-import (
-	"github.com/gin-gonic/gin"
-)
-
 func main() {
-	router := gin.Default()
-	router.Run(":8080")
+	initFirebase()
+	initDB("sqlite3", "db_quick_go.db")
+	initHandler()
 }
