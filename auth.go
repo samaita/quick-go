@@ -3,73 +3,69 @@ package main
 import (
 	"fmt"
 	"log"
-	"strconv"
+	"strings"
 
 	"github.com/gin-gonic/gin"
 )
 
-func handleLogin(c *gin.Context) {
-	var (
-		newCredential  Credential
-		credentialType string
-		err            error
-		errMsg         string
-	)
+const (
+	missingAuthorization = "Missing Authorization"
+	invalidSession       = "Invalid Session"
+)
 
-	newCredential.Key = c.PostForm("credential_key")
-	newCredential.Access = c.PostForm("credential_access")
-	credentialType = c.DefaultPostForm("credential_type", fmt.Sprint(credentialTypeEmail))
+func AuthRequired() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		var (
+			err error
+		)
 
-	if newCredential.Type, err = strconv.ParseInt(credentialType, 10, 64); err != nil {
-		errMsg = fmt.Sprintf("Credential Type '%s' is invalid", credentialType)
-		log.Printf("[handleLogin][Parse Credential] Input: %v, Output %v", credentialType, err)
-		APIResponseBadRequest(c, nil, errMsg)
-		return
+		if err = verifyLogin(c); err != nil {
+			APIResponseInternalServerError(c, nil, err.Error())
+			c.Abort()
+			return
+		}
+
+		c.Next()
 	}
-
-	if err = newCredential.login(); err != nil {
-		log.Printf("[handleLogin][login] Input: %v, Output %v", credentialType, err.Error())
-		APIResponseInternalServerError(c, nil, err.Error())
-		return
-	}
-
-	response := map[string]interface{}{
-		"access_token": newCredential.Token,
-		"uid":          newCredential.UID,
-	}
-
-	APIResponseOK(c, response)
 }
 
-func handleRegister(c *gin.Context) {
+func verifyLogin(c *gin.Context) error {
 	var (
-		newCredential  Credential
-		credentialType string
-		err            error
-		errMsg         string
+		err           error
+		BearerToken   string
+		FirebaseToken string
+		valid         bool
 	)
 
-	newCredential.Key = c.PostForm("credential_key")
-	newCredential.Access = c.PostForm("credential_access")
-	credentialType = c.DefaultPostForm("credential_type", fmt.Sprint(credentialTypeEmail))
-
-	if newCredential.Type, err = strconv.ParseInt(credentialType, 10, 64); err != nil {
-		errMsg = fmt.Sprintf("Credential Type '%s' is invalid", credentialType)
-		log.Printf("[handleRegister][Parse Credential] Input: %v, Output %v", credentialType, err)
-		APIResponseBadRequest(c, nil, errMsg)
-		return
+	BearerToken = strings.Replace(c.Request.Header.Get("Authorization"), "Bearer ", "", -1)
+	FirebaseToken = c.Request.Header.Get("Firebase-Token")
+	if BearerToken == "" && FirebaseToken == "" {
+		return fmt.Errorf("%s", missingAuthorization)
 	}
 
-	if err = newCredential.register(); err != nil {
-		log.Printf("[handleRegister][register] Input: %v, Output %v", credentialType, err.Error())
-		APIResponseInternalServerError(c, nil, err.Error())
-		return
+	if BearerToken != "" {
+		if valid, err = verifyBearerToken(BearerToken); err != nil || !valid {
+			log.Printf("[verifyLogin][verifyCustomToken] Input: %s Output: %v", BearerToken, err)
+			return fmt.Errorf("%s", invalidSession)
+		}
 	}
 
-	response := map[string]interface{}{
-		"access_token": newCredential.Token,
-		"uid":          newCredential.UID,
+	if FirebaseToken != "" {
+		if valid, err = verifyFirebaseToken(FirebaseToken); err != nil || !valid {
+			log.Printf("[verifyLogin][verifyFirebaseToken] Input: %s Output: %v", FirebaseToken, err)
+			return fmt.Errorf("%s", invalidSession)
+		}
 	}
 
-	APIResponseOK(c, response)
+	return err
+}
+
+func verifyBearerToken(token string) (bool, error) {
+	var (
+		err error
+	)
+
+	// CHECK TO REDIS
+
+	return true, err
 }

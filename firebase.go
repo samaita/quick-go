@@ -47,3 +47,21 @@ func generateCustomToken(userIdentification string) (string, error) {
 
 	return token, nil
 }
+
+func verifyFirebaseToken(token string) (bool, error) {
+	var (
+		err error
+	)
+
+	client, err := FirebaseApp.Auth(context.Background())
+	if err != nil {
+		return false, fmt.Errorf("[FirebaseApp.Auth] %v", err)
+	}
+
+	info, err := client.VerifyIDToken(context.Background(), token)
+	if err != nil {
+		return false, fmt.Errorf("[client.VerifyIDToken] %v", err)
+	}
+
+	return info.UID != "", nil
+}

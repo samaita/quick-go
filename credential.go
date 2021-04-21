@@ -65,6 +65,8 @@ func (c *Credential) login() error {
 		return err
 	}
 
+	// Add token to Redis
+
 	return err
 }
 
@@ -106,7 +108,7 @@ func (c *Credential) isRegistered() (bool, error) {
 		isFound int64
 	)
 
-	query = `SELECT 1 FROM user_credential credential_type = $1 AND credential_access = $2 LIMIT 1`
+	query = `SELECT 1 FROM user_credential WHERE credential_type = $1 AND credential_access = $2 LIMIT 1`
 	if err = DB.QueryRowContext(context.Background(), query, c.Type, c.Access).Scan(&isFound); err != nil {
 		log.Printf("[isRegistered][QueryRowContext] Input: %s Output: %v", c.Access, err)
 		return isExist, err
@@ -133,7 +135,7 @@ func (c *Credential) addCredential() error {
 	c.StoredKey = string(newKey)
 
 	query = `
-		INSERT INTO user
+		INSERT INTO user_credential
 		(uid, credential_type, credential_access, credential_key, credential_salt, create_time)
 		VALUES
 		($1, $2, $3, $4, $5, $6)

@@ -21,6 +21,7 @@ const (
 		"thumbnail"	TEXT,
 		"create_time"	TEXT,
 		"update_time"	TEXT,
+		"status"	INTEGER,
 		PRIMARY KEY("uid")
 	);
 	`

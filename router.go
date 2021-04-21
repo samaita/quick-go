@@ -10,5 +10,11 @@ func initHandler() {
 	router.POST("/api/register", handleRegister)
 	router.POST("/api/login", handleLogin)
 
+	authorized := router.Group("/api")
+	authorized.Use(AuthRequired())
+	{
+		authorized.GET("/user/info", handleGetUserInfo)
+	}
+
 	router.Run(":3000")
 }
