@@ -2,7 +2,7 @@ package main
 
 const (
 	dbTableUser = `
-	CREATE TABLE "user" (
+	CREATE TABLE "user_credential" (
 		"uid"	TEXT NOT NULL UNIQUE,
 		"credential_type"	INTEGER DEFAULT 1,
 		"credential_access"	TEXT UNIQUE,
@@ -12,4 +12,16 @@ const (
 		"update_time"	TEXT,
 		PRIMARY KEY("uid")
 	);`
+
+	dbTableUserInfo = `
+	CREATE TABLE "user_info" (
+		"uid"	TEXT NOT NULL UNIQUE,
+		"first_name"	TEXT,
+		"last_name"	TEXT,
+		"thumbnail"	TEXT,
+		"create_time"	TEXT,
+		"update_time"	TEXT,
+		PRIMARY KEY("uid")
+	);
+	`
 )

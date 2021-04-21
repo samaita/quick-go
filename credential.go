@@ -106,7 +106,7 @@ func (c *Credential) isRegistered() (bool, error) {
 		isFound int64
 	)
 
-	query = `SELECT 1 FROM user WHERE credential_type = $1 AND credential_access = $2 LIMIT 1`
+	query = `SELECT 1 FROM user_credential credential_type = $1 AND credential_access = $2 LIMIT 1`
 	if err = DB.QueryRowContext(context.Background(), query, c.Type, c.Access).Scan(&isFound); err != nil {
 		log.Printf("[isRegistered][QueryRowContext] Input: %s Output: %v", c.Access, err)
 		return isExist, err
@@ -182,7 +182,7 @@ func (c *Credential) getStoredCredential() error {
 		query string
 	)
 
-	query = `SELECT uid, credential_key, credential_salt FROM user WHERE credential_type = $1 AND credential_access = $2 LIMIT 1`
+	query = `SELECT uid, credential_key, credential_salt FROM user_credential credential_type = $1 AND credential_access = $2 LIMIT 1`
 	if err = DB.QueryRowContext(context.Background(), query, c.Type, c.Access).Scan(&c.UID, &c.StoredKey, &c.StoredSalt); err != nil {
 		log.Printf("[getStoredCredential][QueryRowContext] Input: %s Output: %v", c.Access, err)
 		return err
