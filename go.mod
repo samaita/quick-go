@@ -8,6 +8,7 @@ require (
 	firebase.google.com/go v3.13.0+incompatible
 	firebase.google.com/go/v4 v4.4.0 // indirect
 	github.com/gin-gonic/gin v1.6.3
+	github.com/go-redis/redis/v8 v8.8.2
 	github.com/google/uuid v1.1.2
 	github.com/jmoiron/sqlx v1.3.3
 	github.com/mattn/go-sqlite3 v1.14.6

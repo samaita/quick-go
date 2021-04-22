@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"strings"
@@ -11,6 +12,9 @@ import (
 const (
 	missingAuthorization = "Missing Authorization"
 	invalidSession       = "Invalid Session"
+
+	headerAuthorization = "Authorization"
+	headerAppToken      = "App-Token"
 )
 
 func AuthRequired() gin.HandlerFunc {
@@ -34,20 +38,24 @@ func verifyLogin(c *gin.Context) error {
 		err           error
 		BearerToken   string
 		FirebaseToken string
+		UID           string
 		valid         bool
 	)
 
-	BearerToken = strings.Replace(c.Request.Header.Get("Authorization"), "Bearer ", "", -1)
-	FirebaseToken = c.Request.Header.Get("Firebase-Token")
+	BearerToken = strings.Replace(c.Request.Header.Get(headerAuthorization), "Bearer ", "", -1)
+	FirebaseToken = c.Request.Header.Get(headerAppToken)
 	if BearerToken == "" && FirebaseToken == "" {
 		return fmt.Errorf("%s", missingAuthorization)
 	}
 
 	if BearerToken != "" {
-		if valid, err = verifyBearerToken(BearerToken); err != nil || !valid {
+		if UID, err = verifyBearerToken(BearerToken); err != nil {
 			log.Printf("[verifyLogin][verifyCustomToken] Input: %s Output: %v", BearerToken, err)
+		}
+		if UID == "" {
 			return fmt.Errorf("%s", invalidSession)
 		}
+		c.Set(CtxUID, UID)
 	}
 
 	if FirebaseToken != "" {
@@ -60,12 +68,15 @@ func verifyLogin(c *gin.Context) error {
 	return err
 }
 
-func verifyBearerToken(token string) (bool, error) {
+func verifyBearerToken(token string) (string, error) {
 	var (
 		err error
 	)
 
-	// CHECK TO REDIS
+	val, err := RedisClient.Get(context.Background(), token).Result()
+	if err != nil {
+		return val, err
+	}
 
-	return true, err
+	return val, err
 }
