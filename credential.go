@@ -60,6 +60,14 @@ func (c *Credential) login() error {
 		return fmt.Errorf("%s or %s", c.typeAccess, errInvalidPassword)
 	}
 
+	return err
+}
+
+func (c *Credential) grantAccess() error {
+	var (
+		err error
+	)
+
 	if err = c.getToken(); err != nil {
 		log.Printf("[login][getToken] Input: %s Output: %v", c.Access, err)
 		return err

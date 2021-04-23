@@ -33,6 +33,12 @@ func handleLogin(c *gin.Context) {
 		return
 	}
 
+	if err = newCredential.grantAccess(); err != nil {
+		log.Printf("[handleLogin][grantAccess] Input: %v, Output %v", credentialType, err.Error())
+		APIResponseInternalServerError(c, nil, err.Error())
+		return
+	}
+
 	response := map[string]interface{}{
 		"access_token": newCredential.Token,
 		"uid":          newCredential.UID,
@@ -44,6 +50,7 @@ func handleLogin(c *gin.Context) {
 func handleRegister(c *gin.Context) {
 	var (
 		newCredential  Credential
+		newUser        User
 		credentialType string
 		err            error
 		errMsg         string
@@ -61,7 +68,30 @@ func handleRegister(c *gin.Context) {
 	}
 
 	if err = newCredential.register(); err != nil {
-		log.Printf("[handleRegister][register] Input: %v, Output %v", credentialType, err.Error())
+		log.Printf("[handleRegister][register] Input: %v, Output %v", newCredential.Access, err.Error())
+		APIResponseInternalServerError(c, nil, err.Error())
+		return
+	}
+
+	newUser.FirstName = c.PostForm("first_name")
+	newUser.LastName = c.PostForm("last_name")
+	newUser.UID = newCredential.UID
+
+	if newUser.FirstName == "" || newUser.LastName == "" {
+		errMsg = fmt.Sprintf("FirstName or LastName empty")
+		log.Printf("[handleRegister][Check First & LastName] Input: %v, Output %v", newCredential.UID, err)
+		APIResponseBadRequest(c, nil, errMsg)
+		return
+	}
+
+	if err = newUser.addUserInfo(userStatusRegistered); err != nil {
+		log.Printf("[handleLogin][addUserInfo] Input: %v, Output %v", newCredential.Access, err.Error())
+		APIResponseInternalServerError(c, nil, err.Error())
+		return
+	}
+
+	if err = newCredential.grantAccess(); err != nil {
+		log.Printf("[handleLogin][grantAccess] Input: %v, Output %v", newCredential.Access, err.Error())
 		APIResponseInternalServerError(c, nil, err.Error())
 		return
 	}
