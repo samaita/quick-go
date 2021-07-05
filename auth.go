@@ -63,6 +63,9 @@ func verifyLogin(c *gin.Context) error {
 			log.Printf("[verifyLogin][verifyFirebaseToken] Input: %s Output: %v", FirebaseToken, err)
 			return fmt.Errorf("%s", invalidSession)
 		}
+
+		// check if already registered in redis & db
+		// if not, add to db user as active
 	}
 
 	return err
