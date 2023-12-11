@@ -1,7 +1,1 @@
-vendor
-*.json
-*.db
-*.exe
-
-frontend/.env
-frontend/node_modules
+tmp
