@@ -14,12 +14,11 @@ func main() {
 	var (
 		err error
 	)
+
 	// init config
 	cfg, err = config.LoadConfig("")
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
-
-	log.Println(cfg)
 
 }
