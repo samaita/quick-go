@@ -12,6 +12,11 @@ const (
 )
 
 type Config struct {
+	App struct {
+		HTTP struct {
+			Port string `mapstructure:"PORT"`
+		} `mapstructure:"HTTP"`
+	} `mapstructure:"APP"`
 	Database struct {
 		Host     string `mapstructure:"HOST"`
 		Port     int    `mapstructure:"PORT"`
