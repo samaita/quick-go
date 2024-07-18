@@ -12,10 +12,44 @@ type AuthHandler struct{}
 
 // SetupRoutes sets up authentication-related routes
 func (a *AuthHandler) SetupRoutes(r *gin.Engine) {
-	r.GET("/", HomeHandler)
+	authRoute := r.Group("/auth")
+	publicRoute := authRoute.Group("/public")
+	v1Route := publicRoute.Group("/v1")
+
+	v1Route.POST("/register", registerHandler)
+	v1Route.POST("/verify", registerHandler)
+	v1Route.POST("/login", registerHandler)
+	v1Route.POST("/logout", registerHandler)
+	v1Route.POST("/refresh", registerHandler)
+	v1Route.GET("/user/profile", getUserProfileHandler)
 }
 
-// HomeHandler handles requests to the home route
-func HomeHandler(c *gin.Context) {
+// registerHandler handles requests to register
+func registerHandler(c *gin.Context) {
+	c.String(http.StatusOK, "Welcome to the Home Page!")
+}
+
+// registerHandler handles requests to register
+func verifyHandler(c *gin.Context) {
+	c.String(http.StatusOK, "Welcome to the Home Page!")
+}
+
+// registerHandler handles requests to register
+func loginHandler(c *gin.Context) {
+	c.String(http.StatusOK, "Welcome to the Home Page!")
+}
+
+// registerHandler handles requests to register
+func logoutHandler(c *gin.Context) {
+	c.String(http.StatusOK, "Welcome to the Home Page!")
+}
+
+// registerHandler handles requests to register
+func refreshTokenHandler(c *gin.Context) {
+	c.String(http.StatusOK, "Welcome to the Home Page!")
+}
+
+// getUserProfileHandler handles requests to get logged in user profile
+func getUserProfileHandler(c *gin.Context) {
 	c.String(http.StatusOK, "Welcome to the Home Page!")
 }
