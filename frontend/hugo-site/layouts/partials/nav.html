@@ -1,0 +1,35 @@
+<nav class="nav" x-data="authState()" x-init="init()">
+  <div class="nav__brand">
+    <a href="/">{{ .Site.Title }}</a>
+  </div>
+  <div class="nav__links">
+    <template x-if="user">
+      <div class="nav__user">
+        <img :src="user.avatar_url" :alt="user.name" class="nav__avatar" x-show="user.avatar_url">
+        <span x-text="user.name"></span>
+        <a href="/auth/logout" class="btn btn--sm btn--outline">Logout</a>
+      </div>
+    </template>
+    <template x-if="!user && !loading">
+      <a href="/auth/google" class="btn btn--primary">Login with Google</a>
+    </template>
+  </div>
+</nav>
+
+<script>
+function authState() {
+  return {
+    user: null,
+    loading: true,
+    async init() {
+      try {
+        const res = await fetch('/auth/me', { credentials: 'include' });
+        if (res.ok) {
+          this.user = await res.json();
+        }
+      } catch (_) {}
+      this.loading = false;
+    }
+  }
+}
+</script>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tag Form — Quick Go</title>
+<link rel="stylesheet" href="/css/main.css">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+<body>
+  <nav class="nav" x-data="authState()" x-init="init()">
+  <div class="nav__brand">
+    <a href="/">Quick Go</a>
+  </div>
+  <div class="nav__links">
+    <template x-if="user">
+      <div class="nav__user">
+        <img :src="user.avatar_url" :alt="user.name" class="nav__avatar" x-show="user.avatar_url">
+        <span x-text="user.name"></span>
+        <a href="/auth/logout" class="btn btn--sm btn--outline">Logout</a>
+      </div>
+    </template>
+    <template x-if="!user && !loading">
+      <a href="/auth/google" class="btn btn--primary">Login with Google</a>
+    </template>
+  </div>
+</nav>
+
+<script>
+function authState() {
+  return {
+    user: null,
+    loading: true,
+    async init() {
+      try {
+        const res = await fetch('/auth/me', { credentials: 'include' });
+        if (res.ok) {
+          this.user = await res.json();
+        }
+      } catch (_) {}
+      this.loading = false;
+    }
+  }
+}
+</script>
+
+  <main class="container">
+    
+
+
+<div
+  x-data="crudForm('tags', [&#34;name&#34;,&#34;slug&#34;,&#34;created_at&#34;])"
+  x-init="init()"
+  class="page page--narrow">
+
+  <div class="page__header">
+    <h1 x-text="isEdit ? 'Edit Tag Form' : 'New Tag Form'"></h1>
+    <a href="/tags/" class="btn btn--sm btn--outline">← Back</a>
+  </div>
+
+  <div x-show="error" class="alert alert--error" x-text="error"></div>
+  <div x-show="success" class="alert alert--success" x-text="success"></div>
+  <div x-show="loading" class="loading-row">Loading…</div>
+
+  <form x-show="!loading" @submit.prevent="save()" class="form" novalidate>
+    <template x-for="col in editableColumns" :key="col">
+      <div class="form__group">
+        <label class="form__label" :for="col" x-text="col.replace(/_/g,' ')"></label>
+        <input
+          class="form__input"
+          :id="col"
+          :name="col"
+          :type="inferType(col)"
+          x-model="form[col]"
+          :placeholder="col">
+      </div>
+    </template>
+
+    <div class="form__actions">
+      <button type="submit" class="btn btn--primary" :disabled="saving">
+        <span x-show="!saving">Save</span>
+        <span x-show="saving">Saving…</span>
+      </button>
+      <a href="/tags/" class="btn btn--outline">Cancel</a>
+    </div>
+  </form>
+</div>
+
+<script>
+function crudForm(urlPath, editableColumns) {
+  return {
+    isEdit: false,
+    recordId: null,
+    editableColumns: editableColumns || [],
+    form: {},
+    loading: false,
+    saving: false,
+    error: null,
+    success: null,
+
+    async init() {
+      const params = new URLSearchParams(window.location.search);
+      this.recordId = params.get('id');
+      this.isEdit = !!this.recordId;
+
+      
+      this.editableColumns.forEach(col => { this.form[col] = ''; });
+
+      if (this.isEdit) {
+        this.loading = true;
+        try {
+          const res = await fetch(`/api/${urlPath}/${this.recordId}`, { credentials: 'include' });
+          if (res.status === 401) { window.location.href = '/'; return; }
+          if (!res.ok) throw new Error('Failed to load record');
+          const data = await res.json();
+          this.editableColumns.forEach(col => { this.form[col] = data[col] ?? ''; });
+        } catch (e) {
+          this.error = e.message;
+        }
+        this.loading = false;
+      }
+    },
+
+    async save() {
+      this.saving = true;
+      this.error = null;
+      this.success = null;
+      try {
+        const url  = this.isEdit ? `/api/${urlPath}/${this.recordId}` : `/api/${urlPath}`;
+        const method = this.isEdit ? 'PUT' : 'POST';
+        const res = await fetch(url, {
+          method,
+          credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(this.form)
+        });
+        if (res.status === 401) { window.location.href = '/'; return; }
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.error || 'Save failed');
+        }
+        this.success = this.isEdit ? 'Record updated.' : 'Record created.';
+        if (!this.isEdit) {
+          this.editableColumns.forEach(col => { this.form[col] = ''; });
+        }
+      } catch (e) {
+        this.error = e.message;
+      }
+      this.saving = false;
+    },
+
+    inferType(col) {
+      if (col.includes('email'))    return 'email';
+      if (col.includes('url'))      return 'url';
+      if (col.includes('date') || col.includes('_at')) return 'datetime-local';
+      if (col.includes('count') || col.includes('_id') || col === 'id') return 'number';
+      return 'text';
+    }
+  }
+}
+</script>
+
+  </main>
+  <footer class="footer">
+  <p>Built with <a href="https://github.com/samaita/quick-go" target="_blank" rel="noopener">quick-go</a></p>
+</footer>
+
+</body>
+</html>

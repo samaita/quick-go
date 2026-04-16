@@ -1,0 +1,118 @@
+{{ define "main" }}
+{{ $urlPath := .Params.url_path }}
+{{ $table   := .Params.table }}
+<div
+  x-data="crudList('{{ $urlPath }}')"
+  x-init="init()"
+  class="page">
+
+  <div class="page__header">
+    <h1>{{ .Title }}</h1>
+    <a :href="'/' + '{{ $urlPath }}' + '/form'" class="btn btn--primary">+ New</a>
+  </div>
+
+  <!-- Error -->
+  <div x-show="error" class="alert alert--error" x-text="error"></div>
+
+  <!-- Loading -->
+  <div x-show="loading" class="loading-row">Loading…</div>
+
+  <!-- Table -->
+  <div x-show="!loading && rows.length > 0" class="table-wrap">
+    <table class="table">
+      <thead>
+        <tr>
+          <template x-for="col in columns" :key="col">
+            <th x-text="col"></th>
+          </template>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <template x-for="row in rows" :key="row[pkField]">
+          <tr>
+            <template x-for="col in columns" :key="col">
+              <td x-text="row[col]"></td>
+            </template>
+            <td class="actions">
+              <a :href="'/' + '{{ $urlPath }}' + '/form?id=' + row[pkField]" class="btn btn--sm btn--outline">Edit</a>
+              <button @click="remove(row[pkField])" class="btn btn--sm btn--danger">Delete</button>
+            </td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Empty state -->
+  <div x-show="!loading && rows.length === 0 && !error" class="empty-state">
+    No records found. <a :href="'/' + '{{ $urlPath }}' + '/form'">Create the first one.</a>
+  </div>
+
+  <!-- Pagination -->
+  <div x-show="rows.length > 0" class="pagination">
+    <button @click="prev()" :disabled="offset === 0" class="btn btn--sm btn--outline">← Prev</button>
+    <span x-text="'Page ' + (Math.floor(offset/limit)+1)"></span>
+    <button @click="next()" :disabled="rows.length < limit" class="btn btn--sm btn--outline">Next →</button>
+  </div>
+</div>
+
+<script>
+function crudList(urlPath) {
+  return {
+    rows: [],
+    columns: [],
+    pkField: 'id',
+    loading: true,
+    error: null,
+    limit: 20,
+    offset: 0,
+
+    async init() {
+      await this.load();
+    },
+
+    async load() {
+      this.loading = true;
+      this.error = null;
+      try {
+        const res = await fetch(`/api/${urlPath}?limit=${this.limit}&offset=${this.offset}`, {
+          credentials: 'include'
+        });
+        if (res.status === 401) { window.location.href = '/'; return; }
+        if (!res.ok) throw new Error(`Server error: ${res.status}`);
+        const data = await res.json();
+        this.rows = data || [];
+        if (this.rows.length > 0) {
+          this.columns = Object.keys(this.rows[0]);
+          // Detect PK: first column named 'id' or ending in '_id', or first column
+          this.pkField = this.columns.find(c => c === 'id') ||
+                         this.columns.find(c => c.endsWith('_id')) ||
+                         this.columns[0];
+        }
+      } catch (e) {
+        this.error = e.message;
+      }
+      this.loading = false;
+    },
+
+    async remove(id) {
+      if (!confirm('Delete this record?')) return;
+      try {
+        const res = await fetch(`/api/${urlPath}/${id}`, {
+          method: 'DELETE',
+          credentials: 'include'
+        });
+        if (!res.ok) throw new Error('Delete failed');
+        await this.load();
+      } catch (e) {
+        this.error = e.message;
+      }
+    },
+
+    next() { this.offset += this.limit; this.load(); },
+    prev() { this.offset = Math.max(0, this.offset - this.limit); this.load(); }
+  }
+}
+</script>
+{{ end }}

@@ -1,0 +1,105 @@
+package handler
+
+import (
+	"context"
+	"encoding/json"
+	"net/http"
+
+	"github.com/go-chi/chi/v5"
+	"github.com/samaita/quick-go/generated/model"
+	"github.com/samaita/quick-go/generated/repo"
+)
+
+type {{.GoName}}Repo interface {
+	List(ctx context.Context, limit, offset int) ([]*model.{{.GoName}}, error)
+	GetByID(ctx context.Context, id {{with .PrimaryKey}}{{.GoType}}{{else}}int64{{end}}) (*model.{{.GoName}}, error)
+	Create(ctx context.Context, m *model.{{.GoName}}) (int64, error)
+	Update(ctx context.Context, id {{with .PrimaryKey}}{{.GoType}}{{else}}int64{{end}}, m *model.{{.GoName}}) error
+	Delete(ctx context.Context, id {{with .PrimaryKey}}{{.GoType}}{{else}}int64{{end}}) error
+}
+
+type {{.GoName}}Handler struct {
+	repo {{.GoName}}Repo
+}
+
+func New{{.GoName}}Handler(r *repo.{{.GoName}}Repo) *{{.GoName}}Handler {
+	return &{{.GoName}}Handler{repo: r}
+}
+
+func (h *{{.GoName}}Handler) List(w http.ResponseWriter, r *http.Request) {
+	limit := queryInt(r, "limit", 20)
+	offset := queryInt(r, "offset", 0)
+
+	items, err := h.repo.List(r.Context(), limit, offset)
+	if err != nil {
+		writeError(w, http.StatusInternalServerError, err.Error())
+		return
+	}
+	if items == nil {
+		items = []*model.{{.GoName}}{}
+	}
+	writeJSON(w, http.StatusOK, items)
+}
+
+func (h *{{.GoName}}Handler) GetByID(w http.ResponseWriter, r *http.Request) {
+	id, err := parseIDInt64(chi.URLParam(r, "id"))
+	if err != nil {
+		writeError(w, http.StatusBadRequest, "invalid id")
+		return
+	}
+	item, err := h.repo.GetByID(r.Context(), {{with .PrimaryKey}}{{.GoType}}{{else}}int64{{end}}(id))
+	if err != nil {
+		writeError(w, http.StatusInternalServerError, err.Error())
+		return
+	}
+	if item == nil {
+		writeError(w, http.StatusNotFound, "not found")
+		return
+	}
+	writeJSON(w, http.StatusOK, item)
+}
+
+func (h *{{.GoName}}Handler) Create(w http.ResponseWriter, r *http.Request) {
+	var m model.{{.GoName}}
+	if err := json.NewDecoder(r.Body).Decode(&m); err != nil {
+		writeError(w, http.StatusBadRequest, "invalid request body")
+		return
+	}
+	id, err := h.repo.Create(r.Context(), &m)
+	if err != nil {
+		writeError(w, http.StatusInternalServerError, err.Error())
+		return
+	}
+	writeJSON(w, http.StatusCreated, map[string]int64{"id": id})
+}
+
+func (h *{{.GoName}}Handler) Update(w http.ResponseWriter, r *http.Request) {
+	id, err := parseIDInt64(chi.URLParam(r, "id"))
+	if err != nil {
+		writeError(w, http.StatusBadRequest, "invalid id")
+		return
+	}
+	var m model.{{.GoName}}
+	if err := json.NewDecoder(r.Body).Decode(&m); err != nil {
+		writeError(w, http.StatusBadRequest, "invalid request body")
+		return
+	}
+	if err := h.repo.Update(r.Context(), {{with .PrimaryKey}}{{.GoType}}{{else}}int64{{end}}(id), &m); err != nil {
+		writeError(w, http.StatusInternalServerError, err.Error())
+		return
+	}
+	writeJSON(w, http.StatusOK, map[string]string{"status": "ok"})
+}
+
+func (h *{{.GoName}}Handler) Delete(w http.ResponseWriter, r *http.Request) {
+	id, err := parseIDInt64(chi.URLParam(r, "id"))
+	if err != nil {
+		writeError(w, http.StatusBadRequest, "invalid id")
+		return
+	}
+	if err := h.repo.Delete(r.Context(), {{with .PrimaryKey}}{{.GoType}}{{else}}int64{{end}}(id)); err != nil {
+		writeError(w, http.StatusInternalServerError, err.Error())
+		return
+	}
+	writeJSON(w, http.StatusOK, map[string]string{"status": "ok"})
+}

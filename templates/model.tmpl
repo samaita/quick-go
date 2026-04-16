@@ -1,0 +1,10 @@
+package model
+{{if .HasTimeColumn}}
+import "time"
+{{end}}
+// {{.GoName}} maps to the {{.Name}} table.
+type {{.GoName}} struct {
+{{- range .Columns}}
+	{{.GoName}} {{.GoType}} `json:"{{.JSONName}}"{{if .IsPK}} db:"{{.JSONName}},pk"{{else}} db:"{{.JSONName}}"{{end}}`
+{{- end}}
+}

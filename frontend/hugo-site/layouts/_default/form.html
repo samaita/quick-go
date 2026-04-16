@@ -1,0 +1,115 @@
+{{ define "main" }}
+{{ $urlPath := .Params.url_path }}
+{{ $columns  := .Params.columns }}
+<div
+  x-data="crudForm('{{ $urlPath }}', {{ $columns | jsonify }})"
+  x-init="init()"
+  class="page page--narrow">
+
+  <div class="page__header">
+    <h1 x-text="isEdit ? 'Edit {{ .Title }}' : 'New {{ .Title }}'"></h1>
+    <a href="/{{ $urlPath }}/" class="btn btn--sm btn--outline">← Back</a>
+  </div>
+
+  <div x-show="error" class="alert alert--error" x-text="error"></div>
+  <div x-show="success" class="alert alert--success" x-text="success"></div>
+  <div x-show="loading" class="loading-row">Loading…</div>
+
+  <form x-show="!loading" @submit.prevent="save()" class="form" novalidate>
+    <template x-for="col in editableColumns" :key="col">
+      <div class="form__group">
+        <label class="form__label" :for="col" x-text="col.replace(/_/g,' ')"></label>
+        <input
+          class="form__input"
+          :id="col"
+          :name="col"
+          :type="inferType(col)"
+          x-model="form[col]"
+          :placeholder="col">
+      </div>
+    </template>
+
+    <div class="form__actions">
+      <button type="submit" class="btn btn--primary" :disabled="saving">
+        <span x-show="!saving">Save</span>
+        <span x-show="saving">Saving…</span>
+      </button>
+      <a href="/{{ $urlPath }}/" class="btn btn--outline">Cancel</a>
+    </div>
+  </form>
+</div>
+
+<script>
+function crudForm(urlPath, editableColumns) {
+  return {
+    isEdit: false,
+    recordId: null,
+    editableColumns: editableColumns || [],
+    form: {},
+    loading: false,
+    saving: false,
+    error: null,
+    success: null,
+
+    async init() {
+      const params = new URLSearchParams(window.location.search);
+      this.recordId = params.get('id');
+      this.isEdit = !!this.recordId;
+
+      // Initialise form fields
+      this.editableColumns.forEach(col => { this.form[col] = ''; });
+
+      if (this.isEdit) {
+        this.loading = true;
+        try {
+          const res = await fetch(`/api/${urlPath}/${this.recordId}`, { credentials: 'include' });
+          if (res.status === 401) { window.location.href = '/'; return; }
+          if (!res.ok) throw new Error('Failed to load record');
+          const data = await res.json();
+          this.editableColumns.forEach(col => { this.form[col] = data[col] ?? ''; });
+        } catch (e) {
+          this.error = e.message;
+        }
+        this.loading = false;
+      }
+    },
+
+    async save() {
+      this.saving = true;
+      this.error = null;
+      this.success = null;
+      try {
+        const url  = this.isEdit ? `/api/${urlPath}/${this.recordId}` : `/api/${urlPath}`;
+        const method = this.isEdit ? 'PUT' : 'POST';
+        const res = await fetch(url, {
+          method,
+          credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(this.form)
+        });
+        if (res.status === 401) { window.location.href = '/'; return; }
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.error || 'Save failed');
+        }
+        this.success = this.isEdit ? 'Record updated.' : 'Record created.';
+        if (!this.isEdit) {
+          this.editableColumns.forEach(col => { this.form[col] = ''; });
+        }
+      } catch (e) {
+        this.error = e.message;
+      }
+      this.saving = false;
+    },
+
+    inferType(col) {
+      if (col.includes('email'))    return 'email';
+      if (col.includes('url'))      return 'url';
+      if (col.includes('date') || col.includes('_at')) return 'datetime-local';
+      if (col.includes('count') || col.includes('_id') || col === 'id') return 'number';
+      return 'text';
+    }
+  }
+}
+</script>
+{{ end }}

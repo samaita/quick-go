@@ -1,0 +1,7 @@
+---
+title: "{{.GoName}} Form"
+layout: "form"
+table: "{{.Name}}"
+url_path: "{{.URLPath}}"
+columns: [{{range $i, $c := .NonPKColumns}}{{if $i}}, {{end}}"{{$c.Name}}"{{end}}]
+---

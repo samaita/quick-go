@@ -1,0 +1,93 @@
+package repo
+
+import (
+	"context"
+	"database/sql"
+	"fmt"
+{{- if .HasTimeColumn}}
+	"time"
+{{- end}}
+
+	"github.com/samaita/quick-go/generated/model"
+)
+
+type {{.GoName}}Repo struct {
+	db *sql.DB
+}
+
+func New{{.GoName}}Repo(db *sql.DB) *{{.GoName}}Repo {
+	return &{{.GoName}}Repo{db: db}
+}
+
+func (r *{{.GoName}}Repo) List(ctx context.Context, limit, offset int) ([]*model.{{.GoName}}, error) {
+	rows, err := r.db.QueryContext(ctx,
+		`SELECT {{range $i, $c := .Columns}}{{if $i}}, {{end}}{{$c.Name}}{{end}} FROM {{.Name}} LIMIT ? OFFSET ?`,
+		limit, offset,
+	)
+	if err != nil {
+		return nil, fmt.Errorf("{{.Name}} list: %w", err)
+	}
+	defer rows.Close()
+
+	var items []*model.{{.GoName}}
+	for rows.Next() {
+		var m model.{{.GoName}}
+		if err := rows.Scan({{range $i, $c := .Columns}}{{if $i}}, {{end}}&m.{{$c.GoName}}{{end}}); err != nil {
+			return nil, fmt.Errorf("{{.Name}} scan: %w", err)
+		}
+		items = append(items, &m)
+	}
+	return items, rows.Err()
+}
+
+func (r *{{.GoName}}Repo) GetByID(ctx context.Context, id {{with .PrimaryKey}}{{.GoType}}{{else}}int64{{end}}) (*model.{{.GoName}}, error) {
+	row := r.db.QueryRowContext(ctx,
+		`SELECT {{range $i, $c := .Columns}}{{if $i}}, {{end}}{{$c.Name}}{{end}} FROM {{.Name}} WHERE {{with .PrimaryKey}}{{.Name}}{{else}}id{{end}} = ?`,
+		id,
+	)
+	var m model.{{.GoName}}
+	if err := row.Scan({{range $i, $c := .Columns}}{{if $i}}, {{end}}&m.{{$c.GoName}}{{end}}); err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, fmt.Errorf("{{.Name}} get: %w", err)
+	}
+	return &m, nil
+}
+
+func (r *{{.GoName}}Repo) Create(ctx context.Context, m *model.{{.GoName}}) (int64, error) {
+	res, err := r.db.ExecContext(ctx,
+		`INSERT INTO {{.Name}} ({{range $i, $c := .NonPKColumns}}{{if $i}}, {{end}}{{$c.Name}}{{end}}) VALUES ({{range $i, $c := .NonPKColumns}}{{if $i}}, {{end}}?{{end}})`,
+		{{range $i, $c := .NonPKColumns}}{{if $i}}, {{end}}m.{{$c.GoName}}{{end}},
+	)
+	if err != nil {
+		return 0, fmt.Errorf("{{.Name}} create: %w", err)
+	}
+	return res.LastInsertId()
+}
+
+func (r *{{.GoName}}Repo) Update(ctx context.Context, id {{with .PrimaryKey}}{{.GoType}}{{else}}int64{{end}}, m *model.{{.GoName}}) error {
+	_, err := r.db.ExecContext(ctx,
+		`UPDATE {{.Name}} SET {{range $i, $c := .NonPKColumns}}{{if $i}}, {{end}}{{$c.Name}} = ?{{end}} WHERE {{with .PrimaryKey}}{{.Name}}{{else}}id{{end}} = ?`,
+		{{range $i, $c := .NonPKColumns}}{{if $i}}, {{end}}m.{{$c.GoName}}{{end}}, id,
+	)
+	if err != nil {
+		return fmt.Errorf("{{.Name}} update: %w", err)
+	}
+	return nil
+}
+
+func (r *{{.GoName}}Repo) Delete(ctx context.Context, id {{with .PrimaryKey}}{{.GoType}}{{else}}int64{{end}}) error {
+	_, err := r.db.ExecContext(ctx,
+		`DELETE FROM {{.Name}} WHERE {{with .PrimaryKey}}{{.Name}}{{else}}id{{end}} = ?`,
+		id,
+	)
+	if err != nil {
+		return fmt.Errorf("{{.Name}} delete: %w", err)
+	}
+	return nil
+}
+{{if .HasTimeColumn}}
+// Suppress unused import lint warning when time.Time columns exist.
+var _ = (*time.Time)(nil)
+{{end}}
